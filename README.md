@@ -18,7 +18,7 @@ Prompt to update site to new version via implementing the following:
 
 The code in the repository is based on:
 
--
+- https://github.com/carltonj2000/canyoneering-pwa
 
 ## Creation History
 

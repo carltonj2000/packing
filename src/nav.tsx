@@ -1,11 +1,11 @@
-import { navOptions, NavOptionT } from "./types";
+import { navOptions, ItemsT } from "./types";
 
 function Button({
   navOption,
   selected,
   selectedSet,
 }: {
-  navOption: NavOptionT;
+  navOption: ItemsT;
   selected: { name: string };
   selectedSet: React.Dispatch<React.SetStateAction<{ name: string }>>;
 }) {
@@ -23,8 +23,8 @@ function Nav({
   selected,
   selectedSet,
 }: {
-  selected: { name: string };
-  selectedSet: React.Dispatch<React.SetStateAction<{ name: string }>>;
+  selected: ItemsT;
+  selectedSet: React.Dispatch<React.SetStateAction<ItemsT>>;
 }) {
   return (
     <nav>
@@ -38,12 +38,17 @@ function Nav({
         <Button
           selected={selected}
           selectedSet={selectedSet}
-          navOption={navOptions.camping}
+          navOption={navOptions.climbing}
         />
         <Button
           selected={selected}
           selectedSet={selectedSet}
           navOption={navOptions.canyoneering}
+        />
+        <Button
+          selected={selected}
+          selectedSet={selectedSet}
+          navOption={navOptions.camping}
         />
         <Button
           selected={selected}

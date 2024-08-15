@@ -1,20 +1,24 @@
 import { useState } from "react";
-import Camping from "./camping";
-import Canyoneering from "./canyoneering";
-import Hiking from "./hiking";
-import Hotel from "./hotel";
 import Nav from "./nav";
-import { navOptions } from "./types";
+import { ItemsT, navOptions } from "./types";
+import Items from "./items";
+
+function ItemsShow({ items, selected }: { items: ItemsT; selected: ItemsT }) {
+  if (selected.name === items.name) return <Items items={items} />;
+  return null;
+}
 
 function App() {
   const [selected, selectedSet] = useState(navOptions.hiking);
   return (
     <>
       <Nav selectedSet={selectedSet} selected={selected} />
-      {selected === navOptions.hiking && <Hiking />}
-      {selected === navOptions.camping && <Camping />}
-      {selected === navOptions.canyoneering && <Canyoneering />}
-      {selected === navOptions.hotel && <Hotel />}
+
+      <ItemsShow items={navOptions.hiking} selected={selected} />
+      <ItemsShow items={navOptions.climbing} selected={selected} />
+      <ItemsShow items={navOptions.canyoneering} selected={selected} />
+      <ItemsShow items={navOptions.camping} selected={selected} />
+      <ItemsShow items={navOptions.hotel} selected={selected} />
     </>
   );
 }
