@@ -12,7 +12,7 @@ function ShowItems({ items }: { items: Array<ItemsT> | undefined }) {
 }
 function Items({ items }: { items: ItemsT }) {
   return (
-    <div className="mt-4">
+    <div className="items">
       {!items.items && <h1>{items.name}</h1>}
       <ShowItems items={items.items} />
     </div>

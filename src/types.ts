@@ -2,8 +2,8 @@ export type ItemsT = { name: string; items?: Array<ItemsT>; details?: string };
 export type NavOptionsT = { [key: string]: ItemsT };
 
 const bathRoomStuff = [
-  { name: "ToothBrush" },
-  { name: "ToothPaste" },
+  { name: "Tooth Brush" },
+  { name: "Tooth Paste" },
   { name: "Dental Floss" },
 ];
 const hydration = [{ name: "Water" }, { name: "Electrolytes" }];
