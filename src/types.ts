@@ -6,6 +6,17 @@ const bathRoomStuff = [
   { name: "Tooth Paste" },
   { name: "Dental Floss" },
 ];
+const electronics = [
+  { name: "Recharge Batteries" },
+  { name: "Head Lamps" },
+  { name: "Air Pump" },
+];
+const electronicsCamping = [
+  ...electronics,
+  { name: "Air Pump" },
+  { name: "Speaker" },
+];
+
 const hydration = [{ name: "Water" }, { name: "Electrolytes" }];
 const firstAidItems = [{ name: "Duck Tape", details: "Stick stuff together" }];
 const firstAid = [{ name: "First Aid Kit", items: [...firstAidItems] }];
@@ -17,7 +28,7 @@ const toiletries = [
 export const navOptions: NavOptionsT = {
   hiking: {
     name: "Hiking",
-    items: [...hydration, ...toiletries, ...firstAid],
+    items: [...hydration, ...toiletries, ...firstAid, ...electronics],
   },
   climbing: { name: "Climbing" },
   canyoneering: {
@@ -26,6 +37,7 @@ export const navOptions: NavOptionsT = {
       ...hydration,
       ...toiletries,
       ...firstAid,
+      ...electronics,
       { name: "Harness" },
       { name: "Rappel Device" },
       { name: "Personal Anchor System" },
