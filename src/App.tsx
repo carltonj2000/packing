@@ -9,13 +9,13 @@ function ItemsShow({ items, selected }: { items: ItemsT; selected: ItemsT }) {
 }
 
 function App() {
-  const [selected, selectedSet] = useState(navOptions.hiking);
+  const [selected, selectedSet] = useState(navOptions.oneNight);
   return (
     <>
       <Nav selectedSet={selectedSet} selected={selected} />
 
       {Object.keys(navOptions).map((no) => (
-        <ItemsShow items={navOptions[no]} selected={selected} />
+        <ItemsShow key={no} items={navOptions[no]} selected={selected} />
       ))}
     </>
   );

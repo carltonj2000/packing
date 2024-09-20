@@ -32,16 +32,12 @@ function Nav({
       <div>
         {Object.keys(navOptions).map((no) => (
           <Button
+            key={no}
             selected={selected}
             selectedSet={selectedSet}
             navOption={navOptions[no]}
           />
         ))}
-        <Button
-          selected={selected}
-          selectedSet={selectedSet}
-          navOption={navOptions.hiking}
-        />
       </div>
     </nav>
   );

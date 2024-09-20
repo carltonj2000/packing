@@ -1,4 +1,9 @@
-export type ItemsT = { name: string; items?: Array<ItemsT>; details?: string };
+export type ItemsT = {
+  name: string;
+  items?: Array<ItemsT>;
+  details?: string;
+  heading?: string;
+};
 export type NavOptionsT = { [key: string]: ItemsT };
 
 const bathRoomStuff = [
@@ -60,5 +65,14 @@ export const navOptions: NavOptionsT = {
     ],
   },
   hotel: { name: "Hotel", items: [...bathRoomStuff] },
-  oneNight: { name: "1 Night", items: [...bathRoomStuff] },
+  oneNight: {
+    name: "1 Night",
+    items: [
+      { name: "Tent" },
+      { name: "Tent Floor Tarp" },
+      { name: "Bug Spray" },
+      { name: "Air Mattress" },
+      { name: "Sleeping Bag" },
+    ],
+  },
 };

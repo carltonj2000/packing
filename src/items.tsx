@@ -5,7 +5,7 @@ function ShowItems({ items }: { items: Array<ItemsT> | undefined }) {
     return (
       <ul>
         {items.map((i) => (
-          <li>{i.name}</li>
+          <li key={i.name}>{i.name}</li>
         ))}
       </ul>
     );
