@@ -53,10 +53,12 @@ export const navOptions: NavOptionsT = {
       ...bathRoomStuff,
       ...toiletries,
       ...firstAid,
+      ...electronicsCamping,
       { name: "Tent" },
       { name: "Tent Floor Tarp" },
       { name: "Bug Spray" },
     ],
   },
   hotel: { name: "Hotel", items: [...bathRoomStuff] },
+  oneNight: { name: "1 Night", items: [...bathRoomStuff] },
 };

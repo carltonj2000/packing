@@ -30,30 +30,17 @@ function Nav({
     <nav>
       <h1>Packing Lists</h1>
       <div>
+        {Object.keys(navOptions).map((no) => (
+          <Button
+            selected={selected}
+            selectedSet={selectedSet}
+            navOption={navOptions[no]}
+          />
+        ))}
         <Button
           selected={selected}
           selectedSet={selectedSet}
           navOption={navOptions.hiking}
-        />
-        <Button
-          selected={selected}
-          selectedSet={selectedSet}
-          navOption={navOptions.climbing}
-        />
-        <Button
-          selected={selected}
-          selectedSet={selectedSet}
-          navOption={navOptions.canyoneering}
-        />
-        <Button
-          selected={selected}
-          selectedSet={selectedSet}
-          navOption={navOptions.camping}
-        />
-        <Button
-          selected={selected}
-          selectedSet={selectedSet}
-          navOption={navOptions.hotel}
         />
       </div>
     </nav>
