@@ -67,12 +67,22 @@ export const navOptions: NavOptionsT = {
   hotel: { name: "Hotel", items: [...bathRoomStuff] },
   oneNight: {
     name: "1 Night",
+    heading: "Red Rock Trifecta",
     items: [
+      { name: "Gatorade Powder - 3 containers" },
+      { name: "6 power bars" },
+      { name: "indica" },
       { name: "Tent" },
       { name: "Tent Floor Tarp" },
       { name: "Bug Spray" },
       { name: "Air Mattress" },
       { name: "Sleeping Bag" },
+      { name: "hand warmers" },
+      { name: "pj's tick" },
+      { name: "3 battery packs - small, medium, large" },
+      { name: "mini pack" },
+      { name: "sunscreen - face" },
+      { name: "sunscreen - body" },
     ],
   },
 };

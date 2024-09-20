@@ -14,9 +14,16 @@ function App() {
     <>
       <Nav selectedSet={selectedSet} selected={selected} />
 
-      {Object.keys(navOptions).map((no) => (
-        <ItemsShow key={no} items={navOptions[no]} selected={selected} />
-      ))}
+      {Object.keys(navOptions).map((no) => {
+        return (
+          <div key={no} className="itemsGrp">
+            {navOptions[no].heading && (
+              <h1 className="h1Below">{navOptions[no].heading}</h1>
+            )}
+            <ItemsShow items={navOptions[no]} selected={selected} />
+          </div>
+        );
+      })}
     </>
   );
 }
