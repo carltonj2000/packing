@@ -9,7 +9,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "serve": "PORT=3173 serve dist",
-    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg"
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg",
+    "docker:build": "docker build -t packing_i .",
+    "docker:dev": "docker run --name packing -d -p 8080:80 packing_i",
+    "docker:compose:up": "echo docker compose up -d packing",
+    "docker:compose:restart": "echo docker compose up -d -no-deps packing"
   },
   "dependencies": {
     "react": "^18.3.1",
