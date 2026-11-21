@@ -1,2 +1,2 @@
-FROM nginx:1.29.5
+FROM nginx:1.30.7
 COPY ./dist /usr/share/nginx/html
